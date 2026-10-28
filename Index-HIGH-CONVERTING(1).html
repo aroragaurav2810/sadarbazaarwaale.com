@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sadar Bazaar Waale - Khari Baoli Se Aapke Ghar Tak | Save 40% vs Amazon | @sadarbazaarwaale</title>
+<meta name="description" content="Gurugram's Favourite - 8 Dals 4KG at Rs 499/549/599 with FREE Rs 300+ Self-Care Hamper. 100+ Families Ordered. Compare Amazon/Flipkart/Blinkit. Instagram @sadarbazaarwaale">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#fefce8;color:#14532d;overflow-x:hidden}
+.top-banner{background:linear-gradient(90deg,#f9c200,#ff8c00);color:#0a3d1f;padding:8px 10px;text-align:center;font-weight:800;font-size:13px;position:sticky;top:0;z-index:100;animation:slide 10s linear infinite}
+.hero{background:linear-gradient(135deg,#0a3d1f 0%,#14532d 50%,#0a3d1f 100%);color:#fef9e7;padding:45px 20px 30px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(249,194,0,0.1) 0%,transparent 70%);animation:pulse 4s ease-in-out infinite}
+.badge{display:inline-block;background:#f9c200;color:#0a3d1f;padding:5px 12px;border-radius:20px;font-weight:800;font-size:11px;margin:3px;animation:bounce 2s infinite}
+.badge-free{background:#25D366;color:#fff;animation:bounce 1s infinite}
+h1{font-size:38px;line-height:1.1;font-weight:800;margin:12px 0;position:relative;z-index:1}
+h1 span{color:#f9c200}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:800;text-decoration:none;margin:5px;font-size:13px;transition:transform 0.2s;position:relative;z-index:1}
+.btn:hover{transform:scale(1.05)}
+.btn-yellow{background:#f9c200;color:#0a3d1f;box-shadow:0 4px 15px rgba(249,194,0,0.4)}
+.btn-white{background:#fff;color:#0a3d1f;border:2px solid #0a3d1f}
+.btn-insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.btn-compare{background:#fff;color:#0a3d1f;border:2px dashed #f9c200}
+.btn-whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:1000;text-decoration:none;animation:pulse 2s infinite}
+.container{max-width:1100px;margin:0 auto;padding:25px 20px}
+.urgency{background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid #f9c200;border-radius:16px;padding:14px;text-align:center;margin:20px 0;position:relative}
+.urgency::before{content:"🔥";position:absolute;top:-10px;left:20px;font-size:20px;background:#fefce8;padding:0 5px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:20px}
+.card{background:#fff;border-radius:20px;padding:20px;border:2px solid #e7e5c9;position:relative;transition:transform 0.3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.1)}
+.card.bestseller{border-color:#f9c200;transform:scale(1.03);box-shadow:0 10px 30px rgba(249,194,0,0.2);background:linear-gradient(180deg,#fffef0,#fff)}
+.card.bestseller:hover{transform:scale(1.05) translateY(-5px)}
+.ribbon{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#f9c200;color:#0a3d1f;padding:4px 16px;border-radius:20px;font-weight:800;font-size:11px;box-shadow:0 2px 10px rgba(0,0,0,0.2)}
+.price{font-size:34px;font-weight:800;color:#0a3d1f}
+.price small{font-size:15px;color:#777;text-decoration:line-through;margin-left:6px}
+.saving-badge{background:#dcfce7;color:#14532d;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;display:inline-block;margin:6px 0}
+ul{list-style:none;margin:10px 0}
+ul li{padding:5px 0;border-bottom:1px dashed #eee;font-size:13px}
+ul li:before{content:"✓ ";color:#16a34a;font-weight:800}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:25px 0}
+.trust div{background:#fff;padding:16px;border-radius:14px;text-align:center;border:1px solid #e7e5c9}
+.footer{background:#0a3d1f;color:#fef9e7;padding:25px 20px;text-align:center;margin-top:30px}
+.note{background:#fef9c3;border:1px solid #f9c200;padding:10px;border-radius:10px;font-size:11px;margin:12px 0;text-align:center}
+.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+.gift-grid div{background:linear-gradient(135deg,#fef9c3,#fde68a);padding:10px;border-radius:10px;text-align:center;font-size:11px;font-weight:700;border:1px solid #f9c200}
+.social-proof{background:#fff;border-radius:16px;padding:16px;margin:20px 0;text-align:center;border:2px solid #e7e5c9}
+.testimonial{background:#f0fdf4;border-left:4px solid #16a34a;padding:10px;margin:8px 0;border-radius:0 10px 10px 0;text-align:left;font-size:12px}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+@media(max-width:600px){h1{font-size:26px}.card.bestseller{transform:none}.btn{padding:11px 16px;font-size:12px}}
+</style>
+</head>
+<body>
+<div class="top-banner">⚡ TODAY ONLY: FREE Self-Care Hamper Worth Rs 300+ | 🚚 Free Delivery in Gurugram on Orders Above Rs 499 | ⏰ Offer Ends Sunday Midnight!</div>
+
+<div class="hero">
+<div class="badge">🔥 Gurugram's Favourite - 100+ Families Ordered</div>
+<div class="badge badge-free">🎁 FREE Gift Worth Rs 300+ Today!</div>
+<div class="badge" style="background:#fff;color:#0a3d1f">💰 Save 40% vs Amazon/Flipkart</div>
+<h1>SADAR BAZAAR WAALE<br><span>KHARI BAOLI SE AAPKE GHAR TAK 📍</span></h1>
+<p style="margin:12px 0;font-size:15px;opacity:.95;line-height:1.4">Ab Daale Khari Baoli Se Seedha Aapke Ghar Tak<br><b>8 Dals = 4KG = Rs 499/549/599</b> / FREE Premium Self-Care Hamper</p>
+
+<div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:10px;margin:15px auto;max-width:600px;backdrop-filter:blur(5px)">
+<p style="font-size:13px">💸 <b>Amazon pe 1KG Dal = Rs 180 | Humara = Rs 124/kg</b> | Aapki Bachaat Rs 56/kg! <a href="./compare.html" target="_blank" rel="noopener" style="color:#f9c200;text-decoration:underline">Compare Karo →</a></p>
+</div>
+
+<a class="btn btn-yellow" href="https://wa.me/918708900353?text=Namaste%20Sadar%20Bazaar%20Waale%20Mujhe%20Dal%20Pack%20Chahiye">🟢 WhatsApp Order - 8708900353</a>
+<a class="btn btn-white" href="#packs">👇 View 3 Packs - Rs 499 Se</a>
+<a class="btn btn-insta" href="https://instagram.com/sadarbazaarwaale" target="_blank">📸 @sadarbazaarwaale</a>
+<a class="btn btn-compare" href="./compare.html" target="_blank" rel="noopener">📊 Price Compare</a>
+
+<div style="margin-top:14px;font-size:11px;opacity:.85">📍 Sadar Bazaar Since 1920 | 🚚 Gurugram Sat-Sun Delivery | 💳 COD | ⭐ 4.9/5 Rating | 📸 @sadarbazaarwaale</div>
+</div>
+
+<div class="container">
+<div class="urgency">
+<h3 style="font-size:14px">⏰ Today Only - FREE Premium Self-Care Hamper Worth Rs 300+!</h3>
+<p style="font-size:12px;margin-top:4px">Facewash / Perfume / Body Wash / Body Lotion / Handwash - Har 4KG Pack Ke Saath FREE! | <span style="background:#0a3d1f;color:#f9c200;padding:2px 8px;border-radius:10px">Ends Sunday 11:59 PM</span></p>
+</div>
+
+<div class="social-proof">
+<h3 style="font-size:14px">⭐ Gurugram Families Love Us - 4.9/5 Rating (127 Reviews)</h3>
+<div class="testimonial"><b>Priya S., DLF Phase 3:</b> "Family pack 549 me 2 premium dals! Quality Khari Baoli jaisi hi hai, aur FREE gift bhi mila. Amazon se sasta!" ⭐⭐⭐⭐⭐</div>
+<div class="testimonial"><b>Rahul M., Golf Course Road:</b> "Budget pack 499 me 8 dals = 4KG! Roz ki dal ka tension khatam. WhatsApp pe order kiya, Sunday ko delivery ho gayi!" ⭐⭐⭐⭐⭐</div>
+<p style="font-size:11px;margin-top:8px"><a href="https://instagram.com/sadarbazaarwaale" target="_blank">📸 See More Reviews on Instagram @sadarbazaarwaale →</a> | <a href="./compare.html" target="_blank" rel="noopener">📊 See Price Comparison vs Amazon/Flipkart/Blinkit</a></p>
+</div>
+
+<div class="trust">
+<div><h3 style="font-size:13px">🌿 Khari Baoli Since 1920</h3><p style="font-size:11px">100+ Years Old Market, Direct Sourcing</p></div>
+<div><h3 style="font-size:13px">💰 Rs 56/kg Bachaat</h3><p style="font-size:11px">Amazon Rs 180/kg vs Hum Rs 124/kg</p></div>
+<div><h3 style="font-size:13px">🎁 FREE Hamper Rs 300+</h3><p style="font-size:11px">Premium Self-Care - Today Only!</p></div>
+<div><h3 style="font-size:13px">🚚 Free Delivery</h3><p style="font-size:11px">Gurugram Sat-Sun, COD Available</p></div>
+</div>
+
+<h2 id="packs" style="text-align:center;font-size:26px;margin-top:15px">🔥 Apna Pack Chuno - 8 Dals = 4 KG = FREE Gift!</h2>
+<p style="text-align:center;margin:6px 0;color:#555;font-size:13px">1 daal ka max 1 pkt | <span style="background:#dcfce7;padding:2px 8px;border-radius:10px;font-weight:700">100+ Families Ordered This Month</span> | <a href="./compare.html" target="_blank" rel="noopener">📊 Compare Prices - Save 40%</a></p>
+
+<div class="cards">
+<div class="card">
+<h3 style="font-size:15px">BUDGET PACK</h3>
+<div class="price">₹499 <small>₹599</small></div>
+<div class="saving-badge">💰 Save Rs 100 / FREE Gift Rs 300 = Rs 400 Total Saving!</div>
+<p style="font-size:11px;color:#666">Roz ki daalon ke liye - Best for Daily Use</p>
+<ul>
+<li>Moong Sabut</li><li>Moong Chilka</li><li>Moong Dhuli</li><li>Chana Dal</li><li>Chana Kabuli</li><li>Masoor Sabut</li><li>Masoor Malka</li><li>Matar Safed</li>
+</ul>
+<div class="note">Sab daalein 130/kg se kam - Budget saver<br>🎁 FREE Premium Self-Care Hamper Today!</div>
+<a class="btn btn-yellow" style="width:100%;text-align:center" href="https://wa.me/918708900353?text=Budget%20Pack%20Rs499%20Order%20Karna%20Hai%20-%20Website%20Se">Order Budget Pack - Rs 499 / FREE Gift</a>
+</div>
+
+<div class="card bestseller">
+<div class="ribbon">🔥 MOST POPULAR - 70% Families Choose This!</div>
+<h3 style="font-size:15px">FAMILY PACK ⭐ Bestseller</h3>
+<div class="price">₹549 <small>₹699</small></div>
+<div class="saving-badge">🔥 Save Rs 150 / FREE Gift Rs 300 = Rs 450 Saving! / 2 Premium Dals!</div>
+<p style="font-size:11px;color:#666">Ghar ka complete taste - 100+ Families Ordered</p>
+<ul>
+<li>Arhar Dal (Premium) - Rs 189/kg on Amazon</li><li>Rajma Srinagar (Premium)</li><li>Moong Dhuli</li><li>Urad Sabut</li><li>Chana Dal</li><li>Masoor Sabut</li><li>Safed Lobiya</li><li>Matar Safed</li>
+</ul>
+<div class="note"><b>2 Premium / 6 Regular = Best Value | Amazon se Rs 56/kg sasta</b><br>🎁 FREE Premium Self-Care Hamper - Today Only!</div>
+<a class="btn" style="width:100%;text-align:center;background:#0a3d1f;color:#f9c200" href="https://wa.me/918708900353?text=Family%20Pack%20Rs549%20Bestseller%20Order%20Karna%20Hai%20-%20Website%20Se">Order Family Pack - Rs 549 ⭐ Most Popular</a>
+</div>
+
+<div class="card">
+<h3 style="font-size:15px">PREMIUM PACK 👑</h3>
+<div class="price">₹599 <small>₹799</small></div>
+<div class="saving-badge">👑 Save Rs 200 / FREE Gift Rs 300 = Rs 500 Saving! All Premium!</div>
+<p style="font-size:11px;color:#666">Sab premium, sab best - For Premium Taste</p>
+<ul>
+<li>Arhar Dal (Premium)</li><li>Urad Chilka (Premium)</li><li>Urad Dhuli (Premium)</li><li>Chana Kabuli Big (Premium)</li><li>Rajma Chitra (Premium)</li><li>Rajma Srinagar (Premium)</li><li>Moong Dhuli</li><li>Urad Sabut</li>
+</ul>
+<div class="note">5+ Premium dals (130+ rate wali) - Luxury Quality<br>🎁 FREE Premium Self-Care Hamper - Today Only!</div>
+<a class="btn btn-yellow" style="width:100%;text-align:center" href="https://wa.me/918708900353?text=Premium%20Pack%20Rs599%20Order%20Karna%20Hai%20-%20Website%20Se">Order Premium Pack - Rs 599 / FREE Gift</a>
+</div>
+</div>
+
+<div style="background:linear-gradient(135deg,#0a3d1f,#14532d);color:#fef9e7;border-radius:16px;padding:20px;text-align:center;margin-top:35px">
+<h3 style="color:#f9c200">🎁 FREE Premium Self-Care Hamper Worth Rs 300+ - Har Pack Ke Saath!</h3>
+<div class="gift-grid" style="max-width:500px;margin:15px auto">
+<div>🧴 Face Wash<br><small>Premium</small></div><div>🌸 Perfume<br><small>Long Lasting</small></div><div>🧼 Handwash<br><small>Hygienic</small></div>
+<div>🚿 Body Wash<br><small>Refreshing</small></div><div>🧴 Body Lotion<br><small>Moisturizing</small></div><div>🎁 / Surprise<br><small>Worth Rs 300+</small></div>
+</div>
+<p style="font-size:11px;opacity:.8">No specific brand - Premium quality hamper worth Rs 300+ FREE - Today Only! Ends Sunday!</p>
+<a class="btn btn-yellow" href="https://wa.me/918708900353?text=FREE%20Gift%20Wala%20Pack%20Chahiye">Claim FREE Gift / Order Now →</a>
+</div>
+
+<div style="background:#fff;border:2px dashed #f9c200;border-radius:16px;padding:16px;text-align:center;margin-top:30px">
+<h3 style="font-size:14px">📊 Amazon, Flipkart, Blinkit Se Kitna Sasta Hai? Dekho!</h3>
+<p style="font-size:12px;margin:8px 0">Amazon pe 1KG Toor Dal = Rs 189 | Humara = Rs 150/kg (500g x 2) | <b>Bachaat Rs 39/kg!</b> Har dal pe bachaat!</p>
+<a href="./compare.html" target="_blank" rel="noopener" style="background:#0a3d1f;color:#f9c200;padding:10px 20px;border-radius:20px;text-decoration:none;font-weight:800;display:inline-block">📊 Full Price Comparison Dekho - 16 Dals →</a>
+<a href="https://instagram.com/sadarbazaarwaale" target="_blank" style="background:#E1306C;color:#fff;padding:10px 20px;border-radius:20px;text-decoration:none;font-weight:800;display:inline-block;margin-left:8px">📸 Instagram Pe Reviews Dekho</a>
+</div>
+
+<h2 style="margin-top:35px;text-align:center;font-size:20px">Kaise Order Kare? 3 Easy Steps - 2 Minute Me!</h2>
+<div class="trust">
+<div><h3>1️⃣ Pack Chuno</h3><p style="font-size:11px">499 / 549 / 599 - 8 Dals = 4KG</p><p style="font-size:10px;color:#16a34a">✓ FREE Gift Included</p></div>
+<div><h3>2️⃣ WhatsApp Karo</h3><p style="font-size:11px">8708900353 pe - 24x7 Available</p><p style="font-size:10px;color:#16a34a">✓ Instant Reply</p></div>
+<div><h3>3️⃣ Delivery Pao</h3><p style="font-size:11px">Sat-Sun Gurugram / FREE Gift Hamper</p><p style="font-size:10px;color:#16a34a">✓ COD Available</p></div>
+</div>
+
+<div class="note">
+<strong>🔒 Trust:</strong> Sadar Bazaar Since 1920 | Hygienically Packed | 100+ Families Trust Us | ⭐ 4.9/5 Rating<br>
+📍 Sadar Bazaar, Delhi | 📸 <a href="https://instagram.com/sadarbazaarwaale" target="_blank">@sadarbazaarwaale</a> | <a href="./compare.html" target="_blank" rel="noopener">📊 Compare Amazon/Flipkart/Blinkit Prices</a> | #GoodFoodHappierHomes
+</div>
+</div>
+
+<a href="https://wa.me/918708900353?text=Hi%20Sadar%20Bazaar%20Waale%20Order%20Karna%20Hai" class="btn-whatsapp-float" target="_blank">💬</a>
+
+<div class="footer">
+<h3>SADAR BAZAAR WAALE</h3>
+<p style="font-size:13px">Ab Daale Khari Baoli Se Seedha Aapke Ghar Tak 📍 | Gurugram's Favourite Since 2024</p>
+<p style="margin:10px 0;font-size:12px">📲 WhatsApp: 8708900353 | 📸 Instagram: <a href="https://instagram.com/sadarbazaarwaale" target="_blank" style="color:#f9c200">@sadarbazaarwaale</a> | 🌐 sadarbazaarwaale.com</p>
+<p style="font-size:12px"><a href="./compare.html" target="_blank" rel="noopener" style="color:#f9c200">📊 Compare Prices - Amazon vs Flipkart vs Blinkit vs Sadar Bazaar Waale - Save 40%</a></p>
+<p style="font-size:10px;opacity:.6;margin-top:10px">© 2026 Sadar Bazaar Waale | 100+ Happy Families in Gurugram | Disclaimer: Amazon, Flipkart, Blinkit are trademarks of their respective owners. We are not affiliated. Prices as observed.</p>
+</div>
+</body>
+</html>
