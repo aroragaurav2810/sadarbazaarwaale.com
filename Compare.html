@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price Comparison - Sadar Bazaar Waale vs Amazon vs Flipkart vs Blinkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+body{background:#0a3d2e;color:#fff;min-height:100vh;padding:16px}
+.container{max-width:1200px;margin:auto}
+.header{text-align:center;padding:20px 0;border-bottom:2px solid #d4af37}
+.header h1{font-size:26px;color:#facc15;line-height:1.3}
+.header p{color:#fef9e8;margin-top:8px}
+.badge{display:inline-block;background:#facc15;color:#0a3d2e;padding:4px 12px;border-radius:20px;font-weight:bold;margin:8px 4px;font-size:13px}
+.table-wrap{background:#fef9e8;color:#0a3d2e;border-radius:16px;overflow-x:auto;margin-top:20px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:750px}
+th{background:#0a3d2e;color:#facc15;padding:12px 6px;font-size:13px;position:sticky;top:0}
+td{padding:10px 6px;border-bottom:1px solid #e7e5d8;text-align:center;font-size:13px}
+td:first-child{text-align:left;font-weight:600;min-width:130px}
+.my-price{background:#dcfce7;font-weight:800;color:#14532d}
+.save{background:#facc15;color:#0a3d2e;font-weight:bold;border-radius:8px;padding:3px 6px;display:inline-block;font-size:11px}
+a.link{color:#0a6b4a;text-decoration:underline;font-size:11px;display:block;margin:2px 0}
+.footer{text-align:center;margin-top:20px;padding:20px;background:#fef9e8;color:#0a3d2e;border-radius:16px}
+.btn{display:inline-block;background:#25D366;color:#fff;padding:14px 28px;border-radius:30px;font-weight:bold;text-decoration:none;margin:8px;font-size:16px}
+.btn.web{background:#0a3d2e}
+.disclaimer{background:#fef3c7;padding:12px;border-radius:8px;margin-top:12px;font-size:11px;color:#78350f}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>सदर बाज़ार वाले vs Amazon vs Flipkart vs Blinkit</h1>
+<p>अब दालें खारी बावली से सीधा आपके घर तक 📍 - 4-Way Price Comparison</p>
+<p><span class="badge">FREE Premium Self-Care Hamper</span> <span class="badge">Gurugram Weekend Delivery</span> <span class="badge">SAVE 30-40%</span></p>
+<p id="lastUpdated" style="margin-top:8px;font-size:12px;color:#facc15"></p>
+</div>
+<div class="table-wrap">
+<table id="priceTable">
+<thead>
+<tr>
+<th>दाल</th>
+<th>हमारा Price<br><small>500g / 1KG</small></th>
+<th>Amazon<br><small>1KG</small></th>
+<th>Flipkart<br><small>1KG</small></th>
+<th>Blinkit<br><small>1KG</small></th>
+<th>Max बचत</th>
+<th>Links</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+<div class="footer">
+<h3>8 दालें = 4KG = Rs 499 / 549 / 599 - Choose 3 Premium Packs</h3>
+<p style="margin:8px 0">🎁 <b>FREE Premium Self-Care Hamper</b> - Facewash, Perfume, Body Wash, Body Lotion</p>
+<a class="btn" href="https://wa.me/918708900353?text=Hi%20Sadar%20Bazaar%20Waale,%20I%20saw%204-way%20price%20comparison">WhatsApp Order: 8708900353</a>
+<a class="btn web" href="https://sadarbazaarwaale.com">Back to Website</a>
+<div class="disclaimer">
+<b>Disclaimer:</b> Amazon, Flipkart, Blinkit are trademarks of their respective owners. Sadar Bazaar Waale is not affiliated, associated, or connected with them. Prices shown are as observed on their respective apps/websites on <span id="lastDate"></span> and may vary. We claim no partnership. Comparison is for informational purpose only. Please verify prices on respective platforms before purchase. <br>Last check: <span id="lastDate2"></span>
+</div>
+</div>
+</div>
+<script>
+async function load(){
+  const res = await fetch('./dal-prices-config.json');
+  const data = await res.json();
+  document.getElementById('lastUpdated').innerText = `Last Updated: ${data.last_updated} | WhatsApp: ${data.whatsapp}`;
+  document.getElementById('lastDate').innerText = data.last_updated;
+  document.getElementById('lastDate2').innerText = data.last_updated;
+  const tbody = document.querySelector('#priceTable tbody');
+  data.dals.forEach(dal=>{
+    const myPerKg = dal.my_price_500g * 2;
+    const maxMarket = Math.max(dal.amazon_price_1kg, dal.flipkart_price_1kg, dal.blinkit_price_1kg);
+    const save = maxMarket - myPerKg;
+    const savePct = Math.round((save/maxMarket)*100);
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><b>${dal.name_hi}</b><br><small>${dal.name_en}</small></td>
+      <td class="my-price">Rs ${dal.my_price_500g} / 500g<br>Rs ${myPerKg} / KG</td>
+      <td>Rs ${dal.amazon_price_1kg}</td>
+      <td>Rs ${dal.flipkart_price_1kg}</td>
+      <td>Rs ${dal.blinkit_price_1kg}</td>
+      <td><span class="save">Save Rs ${save} (${savePct}%)</span></td>
+      <td>
+        <a class="link" href="${dal.amazon_url}" target="_blank">Amazon</a>
+        <a class="link" href="${dal.flipkart_url}" target="_blank">Flipkart</a>
+        <a class="link" href="${dal.blinkit_url}" target="_blank">Blinkit</a>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+load();
+</script>
+</body>
+</html>
